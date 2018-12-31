@@ -1,0 +1,2 @@
+# MyDotNetCoreProjects
+Contains Test projects
