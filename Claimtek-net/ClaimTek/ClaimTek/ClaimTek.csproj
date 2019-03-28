@@ -1,0 +1,762 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48300723-F82D-4A17-AA2E-4C50BAE57C90}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClaimTek</RootNamespace>
+    <AssemblyName>ClaimTek</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44366</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404NotFound.aspx" />
+    <Content Include="App_Data\ClaimTekDb.mdf" />
+    <Content Include="App_Data\ClaimTekDb_log.ldf">
+      <DependentUpon>ClaimTekDb.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\ContactDb.mdf" />
+    <Content Include="App_Data\ContactDb_log.ldf">
+      <DependentUpon>ContactDb.mdf</DependentUpon>
+    </Content>
+    <Content Include="Contacts.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Images\claimtek-logo-teal-gray-01.png" />
+    <Content Include="Images\ctsl.png" />
+    <Content Include="Images\Home\low-highx-01.png" />
+    <Content Include="Images\Home\noroyaltiesx-01.png" />
+    <Content Include="Images\Home\noterritoriesx-01.png" />
+    <Content Include="Images\Home\portability-f-01.png" />
+    <Content Include="Images\Home\scal-f-01.png" />
+    <Content Include="Images\Home\Ssdcl8otmzE_big_270_360.png" />
+    <Content Include="Images\Home\time-flex-f-01.png" />
+    <Content Include="Images\HowCanIMakeItHappen\new-site-slide-551478-300x145.jpg" />
+    <Content Include="Images\HowCanIMakeItHappen\new-site-slide-9987499.jpg" />
+    <Content Include="Images\HowCanIMakeItHappen\newsite-slide55-300x142.jpg" />
+    <Content Include="Images\HowDoesItWork\664557176.jpg" />
+    <Content Include="Images\HowDoesItWork\exeplore-1.jpg" />
+    <Content Include="Images\HowDoesItWork\get-set-1.jpg" />
+    <Content Include="Images\HowDoesItWork\go-1.jpg" />
+    <Content Include="Images\HowDoYouHelpMe\new-site-slide-221212121-300x144.jpg" />
+    <Content Include="Images\HowDoYouHelpMe\new-site-slide-551478.jpg" />
+    <Content Include="Images\HowMuchCanIMake\new-site-slide-551478-300x145.jpg" />
+    <Content Include="Images\HowMuchCanIMake\newsite-slide55.jpg" />
+    <Content Include="Images\IncomePotential\ancill.jpg" />
+    <Content Include="Images\IncomePotential\ans-300x276.jpg" />
+    <Content Include="Images\IncomePotential\ans.jpg" />
+    <Content Include="Images\IncomePotential\Capture-300x212.jpg" />
+    <Content Include="Images\IncomePotential\Capture.jpg" />
+    <Content Include="Images\IncomePotential\cloud-1111.jpg" />
+    <Content Include="Images\IncomePotential\EHR-services-11.jpg" />
+    <Content Include="Images\IncomePotential\frombilling-11.jpg" />
+    <Content Include="Images\IncomePotential\iStock-645086100.jpg" />
+    <Content Include="Images\IncomePotential\MyCloud-income-projections-298x300.jpg" />
+    <Content Include="Images\IncomePotential\MyCloud-income-projections.jpg" />
+    <Content Include="Images\IncomePotential\potential-11-011.jpg" />
+    <Content Include="Images\IncomePotential\projecion-300x141.jpg" />
+    <Content Include="Images\IncomePotential\sampleincomeprojection-300x144.jpg" />
+    <Content Include="Images\IncomePotential\sampleincomeprojection.jpg" />
+    <Content Include="Images\IncomePotential\var1-300x243.jpg" />
+    <Content Include="Images\IncomePotential\var1.jpg" />
+    <Content Include="Images\IncomePotential\var2.jpg" />
+    <Content Include="Images\Marketing\61u4ohFjGCL.jpg" />
+    <Content Include="Images\Marketing\capablemarketer.jpg" />
+    <Content Include="Images\Marketing\marketing03.jpg" />
+    <Content Include="Images\Marketing\mastermedia.jpg" />
+    <Content Include="Images\Marketing\rivalry.jpg" />
+    <Content Include="Images\Marketing\salesss.jpg" />
+    <Content Include="Images\Marketing\toolkit.png" />
+    <Content Include="Images\Software\advanced_software.jpg" />
+    <Content Include="Images\Software\Code-Review-300x186.jpg" />
+    <Content Include="Images\Software\Contact-Manager-300x186.jpg" />
+    <Content Include="Images\Software\Cornerstones-300x186.jpg" />
+    <Content Include="Images\Software\DentOfficeLogo-2-300x116.jpg" />
+    <Content Include="Images\Software\emr-new-logo-green-trans-2-300x116.png" />
+    <Content Include="Images\Software\hl7.jpg" />
+    <Content Include="Images\Software\Practice-Analysis-300x186.jpg" />
+    <Content Include="Images\Software\Untitled-1-1-300x116.png" />
+    <Content Include="Images\Testimonials\Heather_Beauford.jpg" />
+    <Content Include="Images\Testimonials\Zia_Uddin.png" />
+    <Content Include="Images\Training\be-prepared-01.jpg" />
+    <Content Include="Images\Training\live-exercise-1010-01.jpg" />
+    <Content Include="Images\Training\shutterstock_184855544-1170x780.jpg" />
+    <Content Include="Images\Training\shutterstock_184855544-200x150.jpg" />
+    <Content Include="Images\Training\shutterstock_192063251-1170x780.jpg" />
+    <Content Include="Images\Training\shutterstock_192063251-200x150.jpg" />
+    <Content Include="Images\Training\shutterstock_74656324-1170x780.jpg" />
+    <Content Include="Images\Training\shutterstock_74656324-200x150.jpg" />
+    <Content Include="Images\Training\shutterstock_81253987-555-1170x780.jpg" />
+    <Content Include="Images\Training\shutterstock_92100191-1-300x166.jpg" />
+    <Content Include="Images\Training\teamup-01.jpg" />
+    <Content Include="Images\Training\trainingmain.jpg" />
+    <Content Include="Images\TryItFirst\23_Demo.jpg" />
+    <Content Include="Images\TryItFirst\testbeforeinvest-1.jpg" />
+    <Content Include="Images\Home\3hours-a-week-01-271x300.png" />
+    <Content Include="Images\Home\basic-01-271x300.png" />
+    <Content Include="Images\Home\billing111-01.png" />
+    <Content Include="Images\Home\business111-01.png" />
+    <Content Include="Images\Home\consultancy-three01.png" />
+    <Content Include="Images\Home\director222-01.png" />
+    <Content Include="Images\Home\getclients-two01.png" />
+    <Content Include="Images\Home\invest-01-1-271x300.png" />
+    <Content Include="Images\Home\marketing111-01.png" />
+    <Content Include="Images\Home\marketingGear.png" />
+    <Content Include="Images\Home\preferred222-01.png" />
+    <Content Include="Images\Home\principal222-01.png" />
+    <Content Include="Images\Home\salesGear.png" />
+    <Content Include="Images\Home\software111-01.png" />
+    <Content Include="Images\Home\softwareGear.png" />
+    <Content Include="Images\Home\support-p-01.png" />
+    <Content Include="Images\Testimonials\1.png" />
+    <Content Include="Images\Testimonials\11.png" />
+    <Content Include="Images\Testimonials\3-1.png" />
+    <Content Include="Images\Testimonials\Catherine_Aranas.png" />
+    <Content Include="Images\Testimonials\David_Amy_Harmer.png" />
+    <Content Include="Images\Testimonials\David_Waite-1.png" />
+    <Content Include="Images\Testimonials\Julie_Delongy.png" />
+    <Content Include="Images\Testimonials\Kay_Morrison.png" />
+    <Content Include="Images\Testimonials\Paul_Triolo_MD-1.png" />
+    <Content Include="Images\Home\trainfor-01-271x300.png" />
+    <Content Include="Images\Home\whyclaimtek-text-1-40-01.png" />
+    <Content Include="Images\Home\whyclaimtek-text-2-40-01.png" />
+    <Content Include="Images\Home\whyclaimtek-text-3-40-01.png" />
+    <Content Include="Images\vl-box\1440364028_button-play_basic_blue.png" />
+    <Content Include="Images\vl-box\controls.png" />
+    <Content Include="Images\WhyClaimTek\822-300x242.jpg" />
+    <Content Include="Images\WhyClaimTek\empower-300x216.jpg" />
+    <Content Include="Images\WhyClaimTek\experience-300x241.jpg" />
+    <Content Include="Images\WhyClaimTek\makemoney-300x228.jpg" />
+    <Content Include="Images\WhyClaimTek\pressimages-300x238.jpg" />
+    <Content Include="Images\WhyClaimTek\software-2-300x218.jpg" />
+    <Content Include="Images\WhyClaimTek\whyclaimtek.jpg" />
+    <Content Include="Images\Home\Year-1-1-1-01.png" />
+    <Content Include="Images\Home\Year-2-2-2-01.png" />
+    <Content Include="Images\Home\Year-3-3-test-01.png" />
+    <Content Include="Images\WhyMedicalBilling\1151571.jpg" />
+    <Content Include="Images\WhyMedicalBilling\blog_Growing_Business_Needs_Funding.jpg" />
+    <Content Include="Images\WhyMedicalBilling\boomingbusiness.jpg" />
+    <Content Include="Images\WhyMedicalBilling\hprofitable.jpg" />
+    <Content Include="Images\WhyMedicalBilling\nDwwpAk.jpg" />
+    <Content Include="Images\WhyMedicalBilling\unnamed.jpg" />
+    <Content Include="Images\WhyMedicalBilling\whyclaimtek.jpg" />
+    <Content Include="Images\WhyMedicalBilling\whymedicalbillingg.jpg" />
+    <Content Include="Income-Projections.aspx" />
+    <Content Include="Media\DesktopNarrowBanner.mp4" />
+    <Content Include="PrivacyPolicy.aspx" />
+    <Content Include="QuickIncomeProjection.aspx" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="SearchResults.aspx" />
+    <Content Include="Styles\bootstrap-grid.min.css" />
+    <Content Include="Styles\styles.css" />
+    <Content Include="Testimonial-View\Ashley_Fornara.aspx" />
+    <Content Include="Testimonial-View\Catherine_Aranas.aspx" />
+    <Content Include="Testimonial-View\Cindy_Zetina_Richey.aspx" />
+    <Content Include="Testimonial-View\David_Amy_Harmer.aspx" />
+    <Content Include="Testimonial-View\David_Waite.aspx" />
+    <Content Include="Testimonial-View\Heather_Beauford.aspx" />
+    <Content Include="Testimonial-View\Julie_Delongy.aspx" />
+    <Content Include="Testimonial-View\Kay_Morrison.aspx" />
+    <Content Include="Testimonial-View\Maria_Coleman.aspx" />
+    <Content Include="Testimonial-View\Page1.aspx" />
+    <Content Include="Testimonial-View\Page2.aspx" />
+    <Content Include="Testimonial-View\Page3.aspx" />
+    <Content Include="Testimonial-View\Page4.aspx" />
+    <Content Include="Testimonial-View\Page5.aspx" />
+    <Content Include="Testimonial-View\Paul_Triolo_MD.aspx" />
+    <Content Include="Testimonial-View\Terry_Mcnamara.aspx" />
+    <Content Include="Testimonial-View\Zia_Uddin.aspx" />
+    <Content Include="Trainingfull.aspx" />
+    <Content Include="Training\Training-One-On-One.aspx" />
+    <Content Include="Training\Training-Stage-One.aspx" />
+    <Content Include="Training\Training-Stage-Three.aspx" />
+    <Content Include="Training\Training-Stage-Two.aspx" />
+    <Content Include="WhyClaimTek.aspx" />
+    <Content Include="WhyMedicalBilling.aspx" />
+    <Content Include="Xmls\comments-feed.xml" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Xmls\feed.xml" />
+    <Content Include="fonts\font-awesome.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="jsconfig.json" />
+    <Content Include="json.json" />
+    <Content Include="Xmls\wlwmanifest.xml" />
+    <Content Include="Xmls\xmlrpc.xml" />
+    <Content Include="claimtek.json" />
+    <Content Include="Media\ClaimTek-Real_VideoBanner-v4-1910x600.webm" />
+    <Content Include="fonts\fl-bigmug-line.eot" />
+    <Content Include="fonts\fl-bigmug-line.ttf" />
+    <Content Include="fonts\fl-bigmug-line.woff" />
+    <Content Include="fonts\flaticon.eot" />
+    <Content Include="fonts\flaticon.ttf" />
+    <Content Include="fonts\flaticon.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\Mercury-Regular.woff" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="HowCanIMakeItHappen.aspx" />
+    <Content Include="HowDoesItWork.aspx" />
+    <Content Include="HowDoYouHelpMe.aspx" />
+    <Content Include="HowMuchCanIMake.aspx" />
+    <Content Include="IncomePotential.aspx" />
+    <Content Include="Marketing.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\cherry-api.min.js" />
+    <Content Include="Scripts\google-map.min.js" />
+    <Content Include="Scripts\hoverIntent.min.js" />
+    <Content Include="Scripts\init.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery-migrate.min.js" />
+    <Content Include="Scripts\jquery.cherry.stickup.min.js" />
+    <Content Include="Scripts\mega-menu-script.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\motoslider_core.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Scripts\script.min.js" />
+    <Content Include="Scripts\scripts.js" />
+    <Content Include="Scripts\vl-grid-js.js" />
+    <Content Include="Scripts\v_grid.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\wp-embed.min.js" />
+    <Content Include="Scripts\xmlrc.xml" />
+    <Content Include="Site.Master" />
+    <Content Include="Software.aspx" />
+    <Content Include="Styles\add-ons.css" />
+    <Content Include="Styles\cherry-services-style.css" />
+    <Content Include="Styles\cherry-team-style.css" />
+    <Content Include="Styles\fl-bigmug-line.css" />
+    <Content Include="Styles\flaticon.min.css" />
+    <Content Include="Styles\grid-base.css" />
+    <Content Include="Styles\grid-responsive.css" />
+    <Content Include="Styles\hide-widgets.css" />
+    <Content Include="Styles\magnific-popup.css" />
+    <Content Include="Styles\main-responsive.css" />
+    <Content Include="Styles\main.css" />
+    <Content Include="Styles\mega-menu-style.css" />
+    <Content Include="Styles\mercury.css" />
+    <Content Include="Styles\public.css" />
+    <Content Include="Styles\shortcodes.css" />
+    <Content Include="Styles\slick.css" />
+    <Content Include="Styles\style-contact-form.css" />
+    <Content Include="Styles\style-testimonials.css" />
+    <Content Include="Styles\style-theme.css" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Styles\style.min.css" />
+    <Content Include="Styles\swiper.css" />
+    <Content Include="Styles\theme-fl-bigmug-line.css" />
+    <Content Include="Styles\theme.min.css" />
+    <Content Include="Styles\vl-box-grid-css.css" />
+    <Content Include="Styles\wp-video-grid-lighbox-style.css" />
+    <Content Include="Testimonials.aspx" />
+    <Content Include="TryItFirst.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="wp-json.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="404NotFound.aspx.cs">
+      <DependentUpon>404NotFound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404NotFound.aspx.designer.cs">
+      <DependentUpon>404NotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts.aspx.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacts.aspx.designer.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HowCanIMakeItHappen.aspx.cs">
+      <DependentUpon>HowCanIMakeItHappen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HowCanIMakeItHappen.aspx.designer.cs">
+      <DependentUpon>HowCanIMakeItHappen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HowDoesItWork.aspx.cs">
+      <DependentUpon>HowDoesItWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HowDoesItWork.aspx.designer.cs">
+      <DependentUpon>HowDoesItWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HowDoYouHelpMe.aspx.cs">
+      <DependentUpon>HowDoYouHelpMe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HowDoYouHelpMe.aspx.designer.cs">
+      <DependentUpon>HowDoYouHelpMe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HowMuchCanIMake.aspx.cs">
+      <DependentUpon>HowMuchCanIMake.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HowMuchCanIMake.aspx.designer.cs">
+      <DependentUpon>HowMuchCanIMake.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Income-Projections.aspx.cs">
+      <DependentUpon>Income-Projections.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Income-Projections.aspx.designer.cs">
+      <DependentUpon>Income-Projections.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IncomePotential.aspx.cs">
+      <DependentUpon>IncomePotential.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncomePotential.aspx.designer.cs">
+      <DependentUpon>IncomePotential.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Marketing.aspx.cs">
+      <DependentUpon>Marketing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Marketing.aspx.designer.cs">
+      <DependentUpon>Marketing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrivacyPolicy.aspx.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrivacyPolicy.aspx.designer.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickIncomeProjection.aspx.cs">
+      <DependentUpon>QuickIncomeProjection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuickIncomeProjection.aspx.designer.cs">
+      <DependentUpon>QuickIncomeProjection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchResults.aspx.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchResults.aspx.designer.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Software.aspx.cs">
+      <DependentUpon>Software.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Software.aspx.designer.cs">
+      <DependentUpon>Software.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\Ashley_Fornara.aspx.cs">
+      <DependentUpon>Ashley_Fornara.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\Ashley_Fornara.aspx.designer.cs">
+      <DependentUpon>Ashley_Fornara.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\Catherine_Aranas.aspx.cs">
+      <DependentUpon>Catherine_Aranas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\Catherine_Aranas.aspx.designer.cs">
+      <DependentUpon>Catherine_Aranas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\Cindy_Zetina_Richey.aspx.cs">
+      <DependentUpon>Cindy_Zetina_Richey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\Cindy_Zetina_Richey.aspx.designer.cs">
+      <DependentUpon>Cindy_Zetina_Richey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\David_Amy_Harmer.aspx.cs">
+      <DependentUpon>David_Amy_Harmer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\David_Amy_Harmer.aspx.designer.cs">
+      <DependentUpon>David_Amy_Harmer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\David_Waite.aspx.cs">
+      <DependentUpon>David_Waite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\David_Waite.aspx.designer.cs">
+      <DependentUpon>David_Waite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\Heather_Beauford.aspx.cs">
+      <DependentUpon>Heather_Beauford.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\Heather_Beauford.aspx.designer.cs">
+      <DependentUpon>Heather_Beauford.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\Julie_Delongy.aspx.cs">
+      <DependentUpon>Julie_Delongy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\Julie_Delongy.aspx.designer.cs">
+      <DependentUpon>Julie_Delongy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\Kay_Morrison.aspx.cs">
+      <DependentUpon>Kay_Morrison.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\Kay_Morrison.aspx.designer.cs">
+      <DependentUpon>Kay_Morrison.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\Maria_Coleman.aspx.cs">
+      <DependentUpon>Maria_Coleman.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\Maria_Coleman.aspx.designer.cs">
+      <DependentUpon>Maria_Coleman.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\Page1.aspx.cs">
+      <DependentUpon>Page1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\Page1.aspx.designer.cs">
+      <DependentUpon>Page1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\Page2.aspx.cs">
+      <DependentUpon>Page2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\Page2.aspx.designer.cs">
+      <DependentUpon>Page2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\Page3.aspx.cs">
+      <DependentUpon>Page3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\Page3.aspx.designer.cs">
+      <DependentUpon>Page3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\Page4.aspx.cs">
+      <DependentUpon>Page4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\Page4.aspx.designer.cs">
+      <DependentUpon>Page4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\Page5.aspx.cs">
+      <DependentUpon>Page5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\Page5.aspx.designer.cs">
+      <DependentUpon>Page5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\Paul_Triolo_MD.aspx.cs">
+      <DependentUpon>Paul_Triolo_MD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\Paul_Triolo_MD.aspx.designer.cs">
+      <DependentUpon>Paul_Triolo_MD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\Terry_Mcnamara.aspx.cs">
+      <DependentUpon>Terry_Mcnamara.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\Terry_Mcnamara.aspx.designer.cs">
+      <DependentUpon>Terry_Mcnamara.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonial-View\Zia_Uddin.aspx.cs">
+      <DependentUpon>Zia_Uddin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonial-View\Zia_Uddin.aspx.designer.cs">
+      <DependentUpon>Zia_Uddin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Testimonials.aspx.cs">
+      <DependentUpon>Testimonials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testimonials.aspx.designer.cs">
+      <DependentUpon>Testimonials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trainingfull.aspx.cs">
+      <DependentUpon>Trainingfull.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trainingfull.aspx.designer.cs">
+      <DependentUpon>Trainingfull.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Training\Training-One-On-One.aspx.cs">
+      <DependentUpon>Training-One-On-One.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Training\Training-One-On-One.aspx.designer.cs">
+      <DependentUpon>Training-One-On-One.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Training\Training-Stage-One.aspx.cs">
+      <DependentUpon>Training-Stage-One.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Training\Training-Stage-One.aspx.designer.cs">
+      <DependentUpon>Training-Stage-One.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Training\Training-Stage-Three.aspx.cs">
+      <DependentUpon>Training-Stage-Three.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Training\Training-Stage-Three.aspx.designer.cs">
+      <DependentUpon>Training-Stage-Three.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Training\Training-Stage-Two.aspx.cs">
+      <DependentUpon>Training-Stage-Two.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Training\Training-Stage-Two.aspx.designer.cs">
+      <DependentUpon>Training-Stage-Two.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TryItFirst.aspx.cs">
+      <DependentUpon>TryItFirst.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TryItFirst.aspx.designer.cs">
+      <DependentUpon>TryItFirst.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WhyClaimTek.aspx.cs">
+      <DependentUpon>WhyClaimTek.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WhyClaimTek.aspx.designer.cs">
+      <DependentUpon>WhyClaimTek.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WhyMedicalBilling.aspx.cs">
+      <DependentUpon>WhyMedicalBilling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WhyMedicalBilling.aspx.designer.cs">
+      <DependentUpon>WhyMedicalBilling.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51436</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44366/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

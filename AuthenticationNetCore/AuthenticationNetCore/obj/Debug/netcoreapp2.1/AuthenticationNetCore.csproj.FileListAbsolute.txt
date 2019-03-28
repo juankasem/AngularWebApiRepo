@@ -1,0 +1,14 @@
+C:\Users\extreme\source\repos\AuthenticationNetCore\AuthenticationNetCore\bin\Debug\netcoreapp2.1\AuthenticationNetCore.deps.json
+C:\Users\extreme\source\repos\AuthenticationNetCore\AuthenticationNetCore\bin\Debug\netcoreapp2.1\AuthenticationNetCore.runtimeconfig.json
+C:\Users\extreme\source\repos\AuthenticationNetCore\AuthenticationNetCore\bin\Debug\netcoreapp2.1\AuthenticationNetCore.runtimeconfig.dev.json
+C:\Users\extreme\source\repos\AuthenticationNetCore\AuthenticationNetCore\bin\Debug\netcoreapp2.1\AuthenticationNetCore.dll
+C:\Users\extreme\source\repos\AuthenticationNetCore\AuthenticationNetCore\bin\Debug\netcoreapp2.1\AuthenticationNetCore.pdb
+C:\Users\extreme\source\repos\AuthenticationNetCore\AuthenticationNetCore\obj\Debug\netcoreapp2.1\AuthenticationNetCore.csprojAssemblyReference.cache
+C:\Users\extreme\source\repos\AuthenticationNetCore\AuthenticationNetCore\obj\Debug\netcoreapp2.1\AuthenticationNetCore.csproj.CoreCompileInputs.cache
+C:\Users\extreme\source\repos\AuthenticationNetCore\AuthenticationNetCore\obj\Debug\netcoreapp2.1\AuthenticationNetCore.RazorAssemblyInfo.cache
+C:\Users\extreme\source\repos\AuthenticationNetCore\AuthenticationNetCore\obj\Debug\netcoreapp2.1\AuthenticationNetCore.RazorAssemblyInfo.cs
+C:\Users\extreme\source\repos\AuthenticationNetCore\AuthenticationNetCore\obj\Debug\netcoreapp2.1\AuthenticationNetCore.AssemblyInfoInputs.cache
+C:\Users\extreme\source\repos\AuthenticationNetCore\AuthenticationNetCore\obj\Debug\netcoreapp2.1\AuthenticationNetCore.AssemblyInfo.cs
+C:\Users\extreme\source\repos\AuthenticationNetCore\AuthenticationNetCore\obj\Debug\netcoreapp2.1\AuthenticationNetCore.RazorTargetAssemblyInfo.cache
+C:\Users\extreme\source\repos\AuthenticationNetCore\AuthenticationNetCore\obj\Debug\netcoreapp2.1\AuthenticationNetCore.dll
+C:\Users\extreme\source\repos\AuthenticationNetCore\AuthenticationNetCore\obj\Debug\netcoreapp2.1\AuthenticationNetCore.pdb

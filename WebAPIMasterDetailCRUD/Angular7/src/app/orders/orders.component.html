@@ -1,0 +1,20 @@
+<table class="table table-hover">
+  <thead class="thead-light">
+    <th>#Order no.</th>
+    <th>Customer</th>
+    <th>Payment Method</th>
+    <th>Grand Total</th>
+    <th><a class="btn btn-outline-success" routerLink="/order"><i class="fa fa-plus-square"></i>Create New</a></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orderList">
+      <th (click)="openForEdit(order.OrderId)">{{order.OrderNo}}</th>
+      <td (click)="openForEdit(order.OrderId)">{{order.Customer}}</td>
+      <td (click)="openForEdit(order.OrderId)">{{order.PaymentMethod}}</td>
+      <td (click)="openForEdit(order.OrderId)">{{order.GrandTotal}}</td>
+      <td>
+        <a class="btn btn-outline-success" (click)="onOrderDelete(order.OrderId)"><i class="fa fa-trash fa-lg"></i></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
