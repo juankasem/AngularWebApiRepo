@@ -8,7 +8,6 @@ import { NgForm } from '@angular/forms';
   styles: []
 })
 export class PaymentDetailComponent implements OnInit {
-
   constructor(private service: PaymentDetailService) { }
 
   ngOnInit() {
@@ -28,10 +27,28 @@ export class PaymentDetailComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
-    this.service.postPaymentDetail(form.value).subscribe(res => {
+    if (this.service.formData.PaymentId == 0)
+    this.insertRecord(form);
+    else
+    //update Record
+    this.updateRecord(form);  
+  }
+
+  insertRecord(form: NgForm){
+    this.service.postPaymentDetail().subscribe(res => {
       this.resetForm(form);
+      this.service.refreshList();
     },
-    err =>{}
+    err =>{console.log(err);}
+    )
+  }
+
+  updateRecord(form: NgForm){
+    this.service.putPaymentDetail().subscribe(res =>{
+      this.resetForm(form);
+      this.service.refreshList();
+    },
+    err =>{console.log(err);}
     )
   }
 }
